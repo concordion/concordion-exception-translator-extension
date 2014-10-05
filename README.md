@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/concordion/concordion-exception-translator-extension.svg?branch=master)](https://travis-ci.org/concordion/concordion-exception-translator-extension)
+
 This [Concordion](http://www.concordion.org) extension provides the capability to modify exception message text. While initially created to remove superfluous debug information from WebDriver exception messages, it could be used for translating exception messages to other languages.
 
 The [demo project](http://github.com/concordion//concordion-exception-translator-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver.
