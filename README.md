@@ -11,7 +11,7 @@ For example, the following code configures the extension to remove text from the
 ```java
         @Extension
         public ConcordionExtension extension =
-            new TranslatorExtension(new ExampleMessageTranslator());
+            new ExceptionTranslatorExtension(new ExampleMessageTranslator());
 ```
 
 where `ExampleMessageTranslator` is:
