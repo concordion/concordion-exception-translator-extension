@@ -1,7 +1,37 @@
-[Concordion](http://www.concordion.org) is an open source framework for Java that lets you turn a plain English description of a requirement into an automated test.
+This [Concordion](http://www.concordion.org) extension provides the capability to modify exception message text. While initially created to remove superfluous debug information from WebDriver exception messages, it could be used for translating exception messages to other languages.
 
-This project enables extra features in Concordion, such as embedding screenshots or logging information in the output.
+The [demo project](http://github.com/concordion//concordion-exception-translator-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver.
 
-The [demo project](https://github.com/concordion/concordion-extensions-demo) demonstrates the extensions using Concordion with Selenium WebDriver for end-to-end browser testing.
+# Introduction
 
-See the [documentation](http://concordion.org/ExtensionsLibrary.html) for more details.
+The easiest way to configure is to use the `@Extension` annotation on an instance field of type `ExceptionTranslatorExtension` within the fixture class. 
+
+For example, the following code configures the extension to remove text from the exception message starting from the string "Debug info:".
+
+```java
+        @Extension
+        public ConcordionExtension extension =
+            new TranslatorExtension(new ExampleMessageTranslator());
+```
+
+where `ExampleMessageTranslator` is:
+
+```java
+        public class ExampleMessageTranslator() implements MessageTranslator {
+
+            @Override
+            public String translate(String originalMessage) {
+                int debugInfoStart = originalMessage.indexOf("Build info:");
+                if (debugInfoStart > 0) {
+                    return originalMessage.substring(0, debugInfoStart);
+                }
+                return originalMessage;
+            }
+        }
+```
+
+# Further info
+
+* [Specification](http://concordion.github.io/concordion-exception-translator-extension/spec/ExceptionTranslator.html)
+* [API](http://concordion.github.io/concordion-exception-translator-extension/api/index.html)
+* [Demo project](http://github.com/concordion/concordion-exception-translator-extension-demo)

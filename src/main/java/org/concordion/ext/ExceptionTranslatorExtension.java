@@ -24,11 +24,11 @@ import org.concordion.ext.translator.MessageTranslator;
 /**
  * Translates exception messages in the Concordion output.
  */
-public class TranslatorExtension implements ConcordionExtension, ThrowableCaughtListener {
+public class ExceptionTranslatorExtension implements ConcordionExtension, ThrowableCaughtListener {
 
     private final MessageTranslator messageTranslator;
 
-    public TranslatorExtension(MessageTranslator messageTranslator) {
+    public ExceptionTranslatorExtension(MessageTranslator messageTranslator) {
         this.messageTranslator = messageTranslator;
     }
 
