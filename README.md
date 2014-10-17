@@ -4,6 +4,9 @@ This [Concordion](http://www.concordion.org) extension provides the capability t
 
 The [demo project](http://github.com/concordion//concordion-exception-translator-extension-demo) demonstrates this extension using Concordion with Selenium WebDriver.
 
+# Installation
+The extension is available from [Maven Central](http://search.maven.org/#artifactdetails%7Corg.concordion%7Cconcordion-exception-translator-extension%7C1.1.2%7Cjar).</a>
+
 # Introduction
 
 The easiest way to configure is to use the `@Extension` annotation on an instance field of type `ExceptionTranslatorExtension` within the fixture class. 
