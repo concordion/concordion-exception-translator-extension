@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/concordion/concordion-exception-translator-extension.svg?branch=master)](https://travis-ci.org/concordion/concordion-exception-translator-extension)
+[![Maven Central](https://img.shields.io/maven-central/v/org.concordion/concordion-exception-translator-extension.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.concordion%22%20AND%20a%3A%22concordion-exception-translator-extension%22)
+[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 This [Concordion](http://www.concordion.org) extension provides the capability to modify exception message text. While initially created to remove superfluous debug information from WebDriver exception messages, it could be used for translating exception messages to other languages.
 
