@@ -18,9 +18,10 @@ dependencies {
     testCompile 'org.concordion:concordion-extensions:1.1.1'	
 }
 
-githubPages {
+gitPublish {
     repoUri = 'git@github.com:concordion/concordion-exception-translator-extension.git'
-    pages {
+    branch = 'gh-pages'
+	contents {
         from 'docs'
     	
         from ('build/reports/spec/spec/concordion/ext/translator/') {
