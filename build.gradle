@@ -14,10 +14,6 @@ ext {
     inceptionYear = '2011'   
 }
 
-dependencies {
-    testCompile 'org.concordion:concordion-extensions:1.1.1'	
-}
-
 gitPublish {
     repoUri = 'git@github.com:concordion/concordion-exception-translator-extension.git'
     branch = 'gh-pages'
